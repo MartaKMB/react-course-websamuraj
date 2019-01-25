@@ -1,7 +1,3 @@
-// Warunkowe dodanie przycisku i obsługa stanu magazynu (availableProducts)
-// Wyszarzenie liczby 0 - css
-// destrukturyzacja
-
 class App extends React.Component {
   state = {
     availableProducts: 7,
@@ -28,13 +24,18 @@ class App extends React.Component {
   }
 
   render() {
+    const { shoppingCart, availableProducts } = this.state
+    const style = shoppingCart === 0 ? { opacity: 0.3 } : {};
+
     return (
       <div>
-        <button disabled={this.state.shoppingCart ? false : true} onClick={this.handleRemoveFromCart}>-</button>
-        <span> {this.state.shoppingCart} </span>
-        <button disabled={this.state.shoppingCart === this.state.availableProducts ? true : false} onClick={this.handleAddToCart}>+</button>
-        {this.state.shoppingCart > 0 && <button onClick={this.handleBuy}>Kup</button>}
+        <button disabled={shoppingCart ? false : true} onClick={this.handleRemoveFromCart}>-</button>
 
+        <span style={style}> {shoppingCart} </span>
+
+        <button disabled={shoppingCart === availableProducts ? true : false} onClick={this.handleAddToCart}>+</button>
+        
+        {shoppingCart > 0 && <button onClick={this.handleBuy}>Kup</button>}
       </div>
     )
   }

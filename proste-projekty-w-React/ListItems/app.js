@@ -35,6 +35,7 @@ const Item = ({ user }) => (
     <p>Płeć użytkownika: {user.sex}</p>
   </div>
 )
+
 class ListItems extends React.Component {
   state = {
     select: "all",
@@ -43,8 +44,7 @@ class ListItems extends React.Component {
   handleUsersFilter(option) {
     this.setState({
       select: option
-    })
-
+    });
   }
 
   usersList = () => {

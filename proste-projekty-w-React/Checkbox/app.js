@@ -10,7 +10,7 @@ const OrderForm = (props) => {
   return (
     <form onSubmit={submit}>
       <input type="checkbox" id="age" onChange={change} checked={isConfirmed} />
-      <label htmlFor="age">Mam co najmniej 16 lata</label>
+      <label htmlFor="age">Mam co najmniej 16 lat</label>
       <br />
       <button type="submit">Kup bilet</button>
     </form>
