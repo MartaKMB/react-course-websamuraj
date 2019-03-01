@@ -1,17 +1,19 @@
 import React from 'react';
+import './UsersList.css';
 
 const UsersList = props => {
     console.log('users', props.users);
     const users = props.users.map(user => (
         <div key={user.login.uuid}>
-        <h4>{`${user.name.title} ${user.name.last}`}</h4>
-        <p>{user.email}</p>
+            <img src={user.picture.large} alt={user.name.last}/>
+            <h4>{`${user.name.title} ${user.name.last}`}</h4>
+            <p>{user.email}</p>
         </div>
     ))
     return (
-        <ul>
+        <section className='users'>
             {users}
-        </ul>
+        </section>
     );
 }
 
