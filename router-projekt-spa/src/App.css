@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #000;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li {
+  flex-grow: 1;
+}
+
+a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 15px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 4px solid #000;
+}
+
+a:hover {
+  color: yellow;
+}
+
+/* jak nie ma w NavLink activeClassName, domyślnie jest active */
+.active {
+  border-bottom-color: yellow;
+}
+
+.home-selected {
+  border-bottom-color: orangered;
+}
+
+.news-selected {
+  border-bottom-color: orange;
+}
+
+.contact-selected {
+  border-bottom-color: orange;
+}
+
+section {
+  padding-top: 30px;
+  text-align: center;
+}
